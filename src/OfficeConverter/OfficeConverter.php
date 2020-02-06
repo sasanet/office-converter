@@ -153,6 +153,7 @@ class OfficeConverter
     private function getAllowedConverter($extension = null)
     {
         $allowedConverter = [
+            'html' => ['docx','doc','pdf'],            
             ''     => ['pdf'],
             'pptx' => ['pdf'],
             'ppt'  => ['pdf'],
