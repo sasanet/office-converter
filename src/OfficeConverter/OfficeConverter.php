@@ -118,7 +118,7 @@ class OfficeConverter
         $in_filter ="";
         
         if($this->extension === "html" && in_array($outputExtension, ["docx", "doc"])) {
-            $outputExtension = "'docx:MS Word 2007 XML Template'";
+            $outputExtension = "docx:'MS Word 2007 XML Template'";
             $in_filter = "--infilter=writerglobal8_HTML";
         }
         
