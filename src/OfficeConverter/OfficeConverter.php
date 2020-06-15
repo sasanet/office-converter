@@ -119,10 +119,10 @@ class OfficeConverter
 
         if($this->extension === "html" && in_array($outputExtension, ["docx", "doc"])) {
             $outputExtension = "docx:" .  escapeshellarg("MS Word 2007 XML");
-            $in_filter = " --infilter=writerglobal8_HTML --writer";
+            $in_filter = " --infilter=writerglobal8_HTML";
         }
 
-        return "{$this->bin} --headless{$in_filter} --convert-to {$outputExtension} {$oriFile} --outdir {$outputDirectory}";
+        return "{$this->bin} --headless{$in_filter} --writer --convert-to {$outputExtension} {$oriFile} --outdir {$outputDirectory}";
     }
 
     /**
